@@ -5,7 +5,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="relative bg-cover bg-center h-[300px] md:h-[400px]" style="background-image: url('{{ asset('images/about-hero.jpg') }}')">
+    <div class="relative bg-cover bg-center h-[300px] md:h-[400px]" style="background-image: url('{{ asset('images/bannerhd.jpg') }}')">
         <div class="absolute inset-0 bg-dark bg-opacity-70"></div>
         <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
             <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">About Okami Dimsum</h1>
@@ -20,7 +20,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="{{ asset('images/our-story.jpg') }}" alt="Our Story" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="{{ asset('images/about-us.jpg') }}" alt="Our Story" class="rounded-lg shadow-lg w-full h-auto object-cover">
                     <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-xl flex items-center justify-center shadow-md hidden md:flex">
                         <span class="font-bold text-dark text-xl">Est.<br>2019</span>
                     </div>
@@ -108,7 +108,7 @@
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/team-1.jpg') }}" alt="Chef Ling Wei" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/lulu.jpg') }}" alt="Lulu" class="h-full w-full object-cover">
                         </div>
                         <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,7 +116,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-dark">Chef Ling Wei</h3>
+                    <h3 class="text-xl font-bold text-dark">Lulu</h3>
                     <p class="text-primary font-medium">Founder & Head Chef</p>
                     <p class="mt-2 text-gray-600 text-sm">
                         Third-generation dimsum master with over 25 years of culinary experience.
@@ -126,7 +126,7 @@
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/team-2.jpg') }}" alt="Budi Santoso" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/mita.jpg') }}" alt="Budi Santoso" class="h-full w-full object-cover">
                         </div>
                         <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -134,7 +134,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-dark">Budi Santoso</h3>
+                    <h3 class="text-xl font-bold text-dark">Mita</h3>
                     <p class="text-primary font-medium">Operations Manager</p>
                     <p class="mt-2 text-gray-600 text-sm">
                         Ensures our restaurant runs smoothly and every customer leaves satisfied.
@@ -144,7 +144,7 @@
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/team-3.jpg') }}" alt="Maya Wijaya" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/rajwa.jpg') }}" alt="Maya Wijaya" class="h-full w-full object-cover">
                         </div>
                         <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,7 +152,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-dark">Maya Wijaya</h3>
+                    <h3 class="text-xl font-bold text-dark">Rajwa</h3>
                     <p class="text-primary font-medium">Culinary Developer</p>
                     <p class="mt-2 text-gray-600 text-sm">
                         Creates new and exciting dimsum recipes that respect tradition while embracing innovation.
@@ -162,7 +162,7 @@
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/team-4.jpg') }}" alt="Ahmad Fauzi" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/testimonial-1.png') }}" alt="Ahmad Fauzi" class="h-full w-full object-cover">
                         </div>
                         <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -170,7 +170,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-dark">Ahmad Fauzi</h3>
+                    <h3 class="text-xl font-bold text-dark">Andriana</h3>
                     <p class="text-primary font-medium">Customer Experience</p>
                     <p class="mt-2 text-gray-600 text-sm">
                         Dedicated to ensuring every guest has a memorable dining experience.

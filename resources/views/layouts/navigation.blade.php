@@ -4,7 +4,7 @@
             <div class="flex items-center">
                 <!-- Logo -->
                 <a href="{{ route('home') }}" class="flex-shrink-0 flex items-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Okami Dimsum" class="h-10 w-auto transition-transform duration-300 hover:scale-105">
+                    <img src="{{ asset('images/logo.jpg') }}" alt="Okami Dimsum" class="h-16 w-auto transition-transform duration-300 hover:scale-105">
                 </a>
 
                 <!-- Navigation Links -->

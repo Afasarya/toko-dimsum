@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="relative bg-center bg-cover h-96" style="background-image: url('{{ asset('images/hero-bg.jpg') }}')">
+    <div class="relative bg-center bg-cover h-96" style="background-image: url('{{ asset('images/bannerhd.jpg') }}')">
         <div class="absolute inset-0 bg-black bg-opacity-50"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
             <div class="text-white max-w-lg">

@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Hero Banner -->
-    <div class="relative bg-cover bg-center h-64 md:h-80" style="background-image: url('{{ asset('images/dimsum-banner.jpg') }}')">
+    <div class="relative bg-cover bg-center h-64 md:h-80" style="background-image: url('{{ asset('images/bannerhd.jpg') }}')">
         <div class="absolute inset-0 bg-dark bg-opacity-60"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
             <h1 class="text-4xl font-bold text-white mb-2">Our Menu</h1>
