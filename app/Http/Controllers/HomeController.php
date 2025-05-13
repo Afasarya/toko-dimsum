@@ -30,8 +30,8 @@ class HomeController extends Controller
             ->take(8)
             ->get();
             
-        // Get all categories for the filter
-        $categories = Category::all();
+        // Update this line to load product counts
+        $categories = Category::withCount('products')->get();
             
         return view('home.index', compact('featuredProducts', 'popularProducts', 'categories'));
     }

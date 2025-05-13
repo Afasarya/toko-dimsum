@@ -35,13 +35,24 @@ class CategoryResource extends Resource
                             ->maxLength(255)
                             ->live(onBlur: true)
                             ->afterStateUpdated(fn (Forms\Set $set, ?string $state) => $set('slug', Str::slug($state))),
+                            
                         Forms\Components\TextInput::make('slug')
                             ->required()
                             ->maxLength(255)
                             ->unique(ignoreRecord: true),
+                            
                         Forms\Components\Textarea::make('description')
                             ->maxLength(1000)
                             ->columnSpanFull(),
+                            
+                        Forms\Components\FileUpload::make('image')
+                            ->image()
+                            ->directory('categories')
+                            ->columnSpanFull()
+                            ->imageEditor()
+                            ->imageResizeMode('cover')
+                            ->maxSize(2048) // 2MB limit
+                            ->helperText('Upload a square image for best results (Recommended size: 600x600px)')
                     ]),
             ]);
     }
@@ -50,27 +61,26 @@ class CategoryResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\ImageColumn::make('image')
+                    ->square()
+                    ->defaultImageUrl(asset('images/category-placeholder.jpg')),
+                    
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
+                    
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
+                    
                 Tables\Columns\TextColumn::make('products_count')
-                    ->label('Products')
                     ->counts('products'),
+                    
                 Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])

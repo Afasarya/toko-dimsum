@@ -185,12 +185,14 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Update cart count
         @auth
-        fetch('/api/cart/count')
+        fetch('/cart/count')
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
                     document.getElementById('cart-count').textContent = data.data.count;
-                    document.getElementById('mobile-cart-count').textContent = data.data.count;
+                    if (document.getElementById('mobile-cart-count')) {
+                        document.getElementById('mobile-cart-count').textContent = data.data.count;
+                    }
                 }
             })
             .catch(error => console.error('Error fetching cart count:', error));

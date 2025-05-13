@@ -137,14 +137,6 @@
                             <dt class="text-base text-gray-600">Subtotal</dt>
                             <dd class="text-base font-medium text-gray-900">Rp {{ number_format($cart->subtotal ?? 0, 0, ',', '.') }}</dd>
                         </div>
-                        <div class="py-4 flex items-center justify-between">
-                            <dt class="text-base text-gray-600">Tax (10%)</dt>
-                            <dd class="text-base font-medium text-gray-900">Rp {{ number_format($cart->tax ?? 0, 0, ',', '.') }}</dd>
-                        </div>
-                        <div class="py-4 flex items-center justify-between">
-                            <dt class="text-base font-medium text-gray-900">Order Total</dt>
-                            <dd class="text-xl font-semibold text-primary">Rp {{ number_format($cart->total ?? 0, 0, ',', '.') }}</dd>
-                        </div>
                     </dl>
                 </div>
                 

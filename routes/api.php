@@ -18,14 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Public API routes
-Route::get('/menus', [MenuController::class, 'index']);
-Route::get('/menus/{product}', [MenuController::class, 'show']);
+// Public routes
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu/{id}', [MenuController::class, 'show']);
 Route::get('/categories', [MenuController::class, 'categories']);
 
-// Protected API routes
+// Protected routes
 Route::middleware('auth:sanctum')->group(function () {
-    // User info
+    // User profile
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
@@ -33,13 +33,9 @@ Route::middleware('auth:sanctum')->group(function () {
     // Cart endpoints
     Route::get('/cart', [CartController::class, 'index']);
     Route::post('/cart/add', [CartController::class, 'add']);
-    Route::put('/cart/update', [CartController::class, 'update']);
+    Route::post('/cart/update', [CartController::class, 'update']);
     Route::delete('/cart/remove/{id}', [CartController::class, 'remove']);
     Route::get('/cart/count', [CartController::class, 'getCartItemCount']);
-    
-    // Checkout endpoints
-    Route::post('/checkout', [CheckoutController::class, 'process']);
-    Route::get('/checkout/status/{id}', [CheckoutController::class, 'status']);
     
     // Transaction endpoints
     Route::get('/transactions', [TransactionController::class, 'index']);

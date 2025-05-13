@@ -16,13 +16,22 @@ class CartController extends Controller
     public function index()
     {
         $cart = $this->getCart();
-        $cartItems = $cart->items()->with('product')->get();
+        $cartItems = $cart->items()->with(['product', 'product.category'])->get();
         
-        $totalPrice = $cartItems->sum(function ($item) {
+        // Calculate order summary
+        $subtotal = $cartItems->sum(function ($item) {
             return $item->price * $item->quantity;
         });
         
-        return view('cart.index', compact('cartItems', 'totalPrice'));
+        $tax = $subtotal * 0.1; // 10% tax
+        $total = $subtotal + $tax;
+        
+        // Attach calculated values to the cart object
+        $cart->subtotal = $subtotal;
+        $cart->tax = $tax;
+        $cart->total = $total;
+        
+        return view('cart.index', compact('cartItems', 'cart'));
     }
     
     /**
@@ -105,5 +114,21 @@ class CartController extends Controller
         );
         
         return $cart;
+    }
+    
+    /**
+     * Get the current cart item count for the user.
+     */
+    public function getCartCount()
+    {
+        $cart = $this->getCart();
+        $count = $cart->items()->sum('quantity');
+        
+        return response()->json([
+            'success' => true,
+            'data' => [
+                'count' => $count
+            ]
+        ]);
     }
 }

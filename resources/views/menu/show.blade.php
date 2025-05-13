@@ -267,5 +267,77 @@
             });
         }
     });
+
+    // Add this JavaScript to the bottom of your scripts section
+
+    // After successful add to cart
+    document.querySelector('form[action*="cart/add"]').addEventListener('submit', function(e) {
+        // Update cart count after a brief delay to allow server processing
+        setTimeout(() => {
+            updateCartCount();
+        }, 500);
+    });
+
+    function updateCartCount() {
+        fetch('/api/cart/count')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('cart-count').textContent = data.data.count;
+                    if (document.getElementById('mobile-cart-count')) {
+                        document.getElementById('mobile-cart-count').textContent = data.data.count;
+                    }
+                }
+            })
+            .catch(error => console.error('Error updating cart count:', error));
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find the add to cart form and add a listener
+        const addToCartForm = document.querySelector('form[action*="cart/add"]');
+        if (addToCartForm) {
+            addToCartForm.addEventListener('submit', function(e) {
+                // Get the form data
+                const formData = new FormData(this);
+                const quantity = formData.get('quantity');
+                
+                // Update cart count after a brief delay for form submission
+                setTimeout(() => {
+                    updateCartCountAfterAdd(quantity);
+                }, 300);
+            });
+        }
+    });
+
+    function updateCartCountAfterAdd(quantity) {
+        // Get the current count
+        const cartCountElem = document.getElementById('cart-count');
+        const mobileCartCountElem = document.getElementById('mobile-cart-count');
+        
+        if (cartCountElem) {
+            // Parse the current count and add the new quantity
+            const currentCount = parseInt(cartCountElem.textContent) || 0;
+            const newCount = currentCount + parseInt(quantity);
+            
+            // Update the displayed count
+            cartCountElem.textContent = newCount;
+            if (mobileCartCountElem) {
+                mobileCartCountElem.textContent = newCount;
+            }
+        }
+        
+        // Also fetch the latest count from server to ensure accuracy
+        fetch('/cart/count')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById('cart-count').textContent = data.data.count;
+                    if (document.getElementById('mobile-cart-count')) {
+                        document.getElementById('mobile-cart-count').textContent = data.data.count;
+                    }
+                }
+            })
+            .catch(error => console.error('Error updating cart count:', error));
+    }
 </script>
 @endpush
