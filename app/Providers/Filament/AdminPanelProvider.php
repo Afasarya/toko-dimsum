@@ -31,7 +31,9 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('Okami Dimsum Admin')
-            ->brandLogo(asset('images/logo.png'))
+            ->brandLogo(asset('images/logo.jpg'))
+            ->brandLogoHeight(60)
+
             ->favicon(asset('images/favicon.ico'))
             ->colors([
                 'primary' => [

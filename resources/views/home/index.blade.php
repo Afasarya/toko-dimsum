@@ -204,7 +204,7 @@
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/testimonial-1.jpg') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-1.png') }}" alt="Customer" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-gray-900">Lisa Wijaya</h4>
@@ -225,10 +225,10 @@
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/testimonial-2.jpg') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-2.png') }}" alt="Customer" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
-                            <h4 class="text-lg font-medium text-gray-900">Budi Santoso</h4>
+                            <h4 class="text-lg font-medium text-gray-900">Vio</h4>
                             <div class="flex text-yellow-400">
                                 @for ($i = 0; $i < 5; $i++)
                                     <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -246,7 +246,7 @@
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/testimonial-3.jpg') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-3.png') }}" alt="Customer" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-gray-900">Anita Dewi</h4>
