@@ -1,17 +1,17 @@
 @extends('layouts.app')
 
-@section('title', 'Shopping Cart')
+@section('title', 'Keranjang Belanja')
 
 @section('content')
 <div class="bg-gray-50 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
-            <h1 class="text-3xl font-bold text-gray-900">Your Shopping Cart</h1>
+            <h1 class="text-3xl font-bold text-gray-900">Keranjang Belanja Anda</h1>
             <a href="{{ route('menu') }}" class="text-primary hover:text-secondary flex items-center">
                 <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                 </svg>
-                Continue Shopping
+                Lanjutkan Belanja
             </a>
         </div>
     </div>
@@ -49,10 +49,10 @@
                         <svg class="h-16 w-16 text-gray-400 mb-4" viewBox="0 0 20 20" fill="currentColor">
                             <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                         </svg>
-                        <h3 class="text-lg font-medium text-gray-900 mb-2">Your cart is empty</h3>
-                        <p class="text-gray-500 mb-6">Looks like you haven't added any items to your cart yet.</p>
+                        <h3 class="text-lg font-medium text-gray-900 mb-2">Keranjang Anda kosong</h3>
+                        <p class="text-gray-500 mb-6">Sepertinya Anda belum menambahkan produk apapun ke keranjang.</p>
                         <a href="{{ route('menu') }}" class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                            Browse Menu
+                            Lihat Menu
                         </a>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                                                 </svg>
                                             </button>
                                             <button type="submit" class="ml-2 text-sm text-primary hover:text-secondary">
-                                                Update
+                                                Perbarui
                                             </button>
                                         </form>
                                         <form method="POST" action="{{ route('cart.remove', $cartItem->id) }}" class="ml-4">
@@ -120,7 +120,7 @@
                             <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                             </svg>
-                            Clear Cart
+                            Kosongkan Keranjang
                         </button>
                     </form>
                 </div>
@@ -130,7 +130,7 @@
         <!-- Order Summary -->
         <div class="lg:w-1/3">
             <div class="bg-white p-6 rounded-lg shadow-sm">
-                <h3 class="text-lg font-medium text-gray-900 mb-4">Order Summary</h3>
+                <h3 class="text-lg font-medium text-gray-900 mb-4">Ringkasan Pesanan</h3>
                 <div class="flow-root">
                     <dl class="divide-y divide-gray-200">
                         <div class="py-4 flex items-center justify-between">
@@ -143,29 +143,29 @@
                 @if(!$cartItems->isEmpty())
                     <div class="mt-6">
                         <a href="{{ route('checkout.index') }}" class="w-full bg-primary border border-transparent rounded-md shadow-sm py-3 px-4 text-base font-medium text-white hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary flex items-center justify-center">
-                            Proceed to Checkout
+                            Lanjutkan ke Pembayaran
                         </a>
                     </div>
                 @endif
                 
                 <div class="mt-6 border-t border-gray-200 pt-4">
-                    <h4 class="text-sm font-medium text-gray-900 mb-2">Accepted Payment Methods</h4>
+                    <h4 class="text-sm font-medium text-gray-900 mb-2">Metode Pembayaran yang Diterima</h4>
                     <div class="flex space-x-2">
                         <div class="flex-1 rounded-md bg-gray-100 p-2 flex items-center justify-center">
-                            <span class="text-xs text-gray-800 font-medium">Bank Transfer</span>
+                            <span class="text-xs text-gray-800 font-medium">Transfer Bank</span>
                         </div>
                         <div class="flex-1 rounded-md bg-gray-100 p-2 flex items-center justify-center">
                             <span class="text-xs text-gray-800 font-medium">E-Wallet</span>
                         </div>
                         <div class="flex-1 rounded-md bg-gray-100 p-2 flex items-center justify-center">
-                            <span class="text-xs text-gray-800 font-medium">Credit Card</span>
+                            <span class="text-xs text-gray-800 font-medium">Kartu Kredit</span>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="bg-white p-6 rounded-lg shadow-sm mt-4">
-                <h3 class="text-lg font-medium text-gray-900 mb-4">Need Help?</h3>
+                <h3 class="text-lg font-medium text-gray-900 mb-4">Butuh Bantuan?</h3>
                 <div class="space-y-3">
                     <div class="flex items-start">
                         <div class="flex-shrink-0">
@@ -174,7 +174,7 @@
                             </svg>
                         </div>
                         <div class="ml-3 text-sm text-gray-600">
-                            <p>Orders are typically ready in 30 minutes</p>
+                            <p>Pesanan biasanya siap dalam 30 menit</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -184,7 +184,7 @@
                             </svg>
                         </div>
                         <div class="ml-3 text-sm text-gray-600">
-                            <p>Secure payment processing</p>
+                            <p>Proses pembayaran yang aman</p>
                         </div>
                     </div>
                     <div class="flex items-start">
@@ -194,13 +194,13 @@
                             </svg>
                         </div>
                         <div class="ml-3 text-sm text-gray-600">
-                            <p>Free delivery for orders over Rp 100.000</p>
+                            <p>Pengiriman gratis untuk pesanan di atas Rp 100.000</p>
                         </div>
                     </div>
                 </div>
                 <div class="mt-6">
                     <a href="#" class="text-sm font-medium text-primary hover:text-secondary">
-                        Contact Customer Support
+                        Hubungi Layanan Pelanggan
                     </a>
                 </div>
             </div>

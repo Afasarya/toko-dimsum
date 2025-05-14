@@ -2,18 +2,18 @@
 
 @section('content')
 <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-bold text-gray-900 mb-6">My Orders</h1>
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">Pesanan Saya</h1>
     
     @if ($transactions->isEmpty())
         <div class="bg-white shadow overflow-hidden sm:rounded-lg p-6 text-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mx-auto text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
             </svg>
-            <h2 class="mt-4 text-lg font-medium text-gray-700">No Orders Yet</h2>
-            <p class="mt-2 text-gray-500">You haven't placed any orders yet.</p>
+            <h2 class="mt-4 text-lg font-medium text-gray-700">Belum Ada Pesanan</h2>
+            <p class="mt-2 text-gray-500">Anda belum membuat pesanan apapun.</p>
             <div class="mt-6">
                 <a href="{{ route('menu') }}" class="inline-flex justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-secondary">
-                    Browse Menu
+                    Lihat Menu
                 </a>
             </div>
         </div>
@@ -31,7 +31,7 @@
                                         </p>
                                         <div class="flex items-center">
                                             <p class="text-xs text-gray-500">
-                                                {{ $transaction->created_at->format('M d, Y, h:i A') }}
+                                                {{ $transaction->created_at->format('d M Y, H:i') }}
                                             </p>
                                         </div>
                                     </div>
@@ -39,7 +39,8 @@
                                         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full 
                                             {{ $transaction->payment_status === 'paid' ? 'bg-green-100 text-green-800' : 
                                                ($transaction->payment_status === 'pending' ? 'bg-yellow-100 text-yellow-800' : 'bg-red-100 text-red-800') }}">
-                                            {{ ucfirst($transaction->payment_status) }}
+                                            {{ $transaction->payment_status === 'paid' ? 'Lunas' : 
+                                               ($transaction->payment_status === 'pending' ? 'Menunggu Pembayaran' : 'Gagal') }}
                                         </span>
                                     </div>
                                 </div>

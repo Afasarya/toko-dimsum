@@ -4,7 +4,7 @@
             <!-- Logo & Header -->
             <div class="text-center mb-10">
                 <a href="{{ route('home') }}" class="inline-block">
-                    <img class="h-16 mx-auto mb-3 transition-transform duration-300 hover:scale-105" src="{{ asset('images/logo.png') }}" alt="Okami Dimsum">
+                    <img class="h-16 mx-auto mb-3 transition-transform duration-300 hover:scale-105" src="{{ asset('images/logoo.png') }}" alt="Okami Dimsum">
                 </a>
                 <h2 class="text-3xl font-bold text-dark">Create an account</h2>
                 <p class="mt-2 text-gray-600">Join Okami Dimsum for a delicious experience</p>
