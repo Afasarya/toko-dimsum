@@ -28,8 +28,8 @@
                     </div>
                     <h3 class="text-xl font-bold text-dark mb-3">Visit Us</h3>
                     <p class="text-gray-600">
-                        123 Dimsum Street<br>
-                        Jakarta, Indonesia<br>
+                        Jl. Kaliputih, Purwokerto Wetan<br>
+                        Banyumas, Indonesia<br>
                         12345
                     </p>
                 </div>

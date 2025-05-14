@@ -144,7 +144,7 @@
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/rajwa.jpg') }}" alt="Maya Wijaya" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/veas.jpg') }}" alt="Maya Wijaya" class="h-full w-full object-cover">
                         </div>
                         <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
                             <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -152,7 +152,7 @@
                             </svg>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-dark">Rajwa</h3>
+                    <h3 class="text-xl font-bold text-dark">Veas</h3>
                     <p class="text-primary font-medium">Culinary Developer</p>
                     <p class="mt-2 text-gray-600 text-sm">
                         Creates new and exciting dimsum recipes that respect tradition while embracing innovation.
@@ -194,7 +194,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="group rounded-xl overflow-hidden shadow-soft">
                     <div class="relative h-64">
-                        <img src="{{ asset('images/restaurant-1.jpg') }}" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('images/okami-1.jpg') }}" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
                         <h3 class="font-medium text-dark">Modern Dining Area</h3>
@@ -203,16 +203,16 @@
                 
                 <div class="group rounded-xl overflow-hidden shadow-soft">
                     <div class="relative h-64">
-                        <img src="{{ asset('images/restaurant-2.jpg') }}" alt="Private Dining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('images/okami-2.jpeg') }}" alt="Private Dining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="font-medium text-dark">Private Dining Rooms</h3>
+                        <h3 class="font-medium text-dark">Clean and comfortable </h3>
                     </div>
                 </div>
                 
                 <div class="group rounded-xl overflow-hidden shadow-soft">
                     <div class="relative h-64">
-                        <img src="{{ asset('images/restaurant-3.jpg') }}" alt="Open Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="{{ asset('images/open-kitchen.jpeg') }}" alt="Open Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
                         <h3 class="font-medium text-dark">Open Kitchen Concept</h3>
