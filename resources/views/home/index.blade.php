@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Welcome to Okami Dimsum')
+@section('title', 'Selamat Datang di Okami Dimsum')
 
 @section('content')
     <!-- Hero Section -->
@@ -9,14 +9,14 @@
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
             <div class="text-white max-w-lg">
                 <h1 class="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-                    Authentic <span class="text-accent">Dimsum</span> Delivery
+                    Selamat datang di <span class="text-accent">Okami</span> Dimsum
                 </h1>
                 <p class="mt-4 text-xl">
-                    Experience the taste of premium handcrafted dimsum delivered to your doorstep.
+                    Rasakan nikmatnya dimsum premium buatan tangan yang diantar langsung ke rumah Anda.
                 </p>
                 <div class="mt-8">
                     <a href="{{ route('menu') }}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-secondary transition duration-300">
-                        Order Now
+                        Pesan Sekarang
                     </a>
                 </div>
             </div>
@@ -27,9 +27,9 @@
     <div class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">Browse By Category</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Jelajahi Kategori</h2>
                 <p class="mt-4 text-lg text-gray-600">
-                    Explore our wide variety of dimsum categories
+                    Temukan berbagai variasi kategori dimsum kami
                 </p>
             </div>
 
@@ -44,7 +44,7 @@
                             <div class="absolute bottom-0 left-0 p-4">
                                 <h3 class="text-xl font-semibold text-white">{{ $category->name }}</h3>
                                 <p class="text-sm text-gray-200 mt-1">
-                                    {{ $category->products_count ?? '0' }} Products
+                                    {{ $category->products_count ?? '0' }} Produk
                                 </p>
                             </div>
                         </div>
@@ -58,9 +58,9 @@
     <div class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">Featured Products</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Produk Unggulan</h2>
                 <p class="mt-4 text-lg text-gray-600">
-                    Our most popular and loved dimsum
+                    Dimsum terpopuler dan terfavorit kami
                 </p>
             </div>
 
@@ -97,7 +97,7 @@
             
             <div class="mt-10 text-center">
                 <a href="{{ route('menu') }}" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-secondary transition duration-300">
-                    View All Menu
+                    Lihat Semua Menu
                 </a>
             </div>
         </div>
@@ -107,9 +107,9 @@
     <div class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">Most Popular</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Paling Populer</h2>
                 <p class="mt-4 text-lg text-gray-600">
-                    Our customers' favorites
+                    Favorit para pelanggan kami
                 </p>
             </div>
 
@@ -150,7 +150,7 @@
     <div class="bg-accent bg-opacity-20 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">Why Choose Us</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Mengapa Memilih Kami</h2>
             </div>
 
             <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-3">
@@ -160,9 +160,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                         </svg>
                     </div>
-                    <h3 class="mt-4 text-xl font-medium text-gray-900">Premium Quality</h3>
+                    <h3 class="mt-4 text-xl font-medium text-gray-900">Kualitas Premium</h3>
                     <p class="mt-2 text-gray-600">
-                        We use only the freshest ingredients to ensure the best taste and quality.
+                        Kami hanya menggunakan bahan-bahan segar terbaik untuk memastikan rasa dan kualitas maksimal.
                     </p>
                 </div>
 
@@ -172,9 +172,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3 class="mt-4 text-xl font-medium text-gray-900">Fast Delivery</h3>
+                    <h3 class="mt-4 text-xl font-medium text-gray-900">Pengiriman Cepat</h3>
                     <p class="mt-2 text-gray-600">
-                        We deliver your favorite dimsum straight to your door in the shortest time possible.
+                        Kami mengirimkan dimsum favorit Anda langsung ke pintu rumah dalam waktu sesingkat mungkin.
                     </p>
                 </div>
 
@@ -184,9 +184,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
                         </svg>
                     </div>
-                    <h3 class="mt-4 text-xl font-medium text-gray-900">Secure Payment</h3>
+                    <h3 class="mt-4 text-xl font-medium text-gray-900">Pembayaran Aman</h3>
                     <p class="mt-2 text-gray-600">
-                        Multiple payment options available with secure processing for your peace of mind.
+                        Berbagai pilihan pembayaran tersedia dengan proses yang aman untuk ketenangan pikiran Anda.
                     </p>
                 </div>
             </div>
@@ -197,14 +197,14 @@
     <div class="bg-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl font-bold text-gray-900">What Our Customers Say</h2>
+                <h2 class="text-3xl font-bold text-gray-900">Kata Pelanggan Kami</h2>
             </div>
 
             <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/team-1.png') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-1.png') }}" alt="Pelanggan" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-gray-900">Lisa Wijaya</h4>
@@ -218,14 +218,14 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "The dimsum from Okami is absolutely delicious! The flavors are authentic, and the delivery is always prompt. Will order again for sure!"
+                        "Dimsum dari Okami sangat lezat! Rasanya autentik dan pengirimannya selalu tepat waktu. Pasti akan pesan lagi!"
                     </p>
                 </div>
 
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/team-2.png') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-2.png') }}" alt="Pelanggan" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-gray-900">Vio</h4>
@@ -239,14 +239,14 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "Great value for money! The portions are generous and the quality is top-notch. The hakau and siomai are my personal favorites."
+                        "Nilai yang bagus untuk uang yang dikeluarkan! Porsinya besar dan kualitasnya terbaik. Hakau dan siomay adalah favorit pribadi saya."
                     </p>
                 </div>
 
                 <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="h-12 w-12 rounded-full overflow-hidden bg-gray-200">
-                            <img src="{{ asset('images/team-3.png') }}" alt="Customer" class="h-full w-full object-cover">
+                            <img src="{{ asset('images/team-3.png') }}" alt="Pelanggan" class="h-full w-full object-cover">
                         </div>
                         <div class="ml-4">
                             <h4 class="text-lg font-medium text-gray-900">Anita Dewi</h4>
@@ -260,7 +260,7 @@
                         </div>
                     </div>
                     <p class="text-gray-600">
-                        "I ordered for a family gathering and everyone loved it! The packaging kept everything fresh and the online ordering process was seamless."
+                        "Saya memesan untuk acara keluarga dan semuanya suka! Kemasannya menjaga makanan tetap segar dan proses pemesanan online sangat mudah."
                     </p>
                 </div>
             </div>

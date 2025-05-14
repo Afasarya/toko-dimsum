@@ -1,16 +1,16 @@
 <!-- filepath: e:\Kelas-12\Joki\Okami\okami-dimsum\resources\views\about-us.blade.php -->
 @extends('layouts.app')
 
-@section('title', 'About Us')
+@section('title', 'Tentang Kami')
 
 @section('content')
     <!-- Hero Section -->
     <div class="relative bg-cover bg-center h-[300px] md:h-[400px]" style="background-image: url('{{ asset('images/bannerhd.jpg') }}')">
         <div class="absolute inset-0 bg-dark bg-opacity-70"></div>
         <div class="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">About Okami Dimsum</h1>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Tentang Okami Dimsum</h1>
             <p class="text-lg text-light max-w-xl">
-                A passion for authentic dimsum and a commitment to quality ingredients
+                Semangat untuk dimsum autentik dan komitmen terhadap bahan-bahan berkualitas
             </p>
         </div>
     </div>
@@ -20,23 +20,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 <div class="relative">
-                    <img src="{{ asset('images/about-us.jpg') }}" alt="Our Story" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                    <img src="{{ asset('images/about-us.jpg') }}" alt="Cerita Kami" class="rounded-lg shadow-lg w-full h-auto object-cover">
                     <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-xl flex items-center justify-center shadow-md hidden md:flex">
-                        <span class="font-bold text-dark text-xl">Est.<br>2019</span>
+                        <span class="font-bold text-dark text-xl">Sejak<br>2019</span>
                     </div>
                 </div>
                 <div class="space-y-6">
-                    <h2 class="text-3xl font-bold text-dark">Our Story</h2>
+                    <h2 class="text-3xl font-bold text-dark">Cerita Kami</h2>
                     <div class="h-1 w-16 bg-primary rounded-full"></div>
                     <p class="text-gray-600">
-                        Okami Dimsum started as a small family-owned restaurant in Jakarta with a simple mission: to bring authentic, high-quality dimsum to food enthusiasts. Founded in 2019 by Chef Ling Wei, a third-generation dimsum master, our restaurant quickly became known for its commitment to traditional recipes and innovative presentation.
-                    </p>
+                        Dimsum berasal dari wilayah selatan Tiongkok, terutama Guangdong (Kanton). Tradisi makan dimsum berawal dari kebiasaan para pedagang dan pelancong yang beristirahat di rumah teh di sepanjang Jalur Sutra. Rumah teh ini mulai menyajikan makanan kecil untuk Menemani minum teh, yang kemudian berkembang menjadi budaya "yum cha". Dimsum bukan sekadar makanan, tapi juga simbol kebersamaan dan tradisi sosial dalam budaya Tiongkok. Aktivitas "yum cha" yang menyertainya telah menjadi ritual penting dalam keluarga dan komunitas.                    </p>
                     <p class="text-gray-600">
-                        The name "Okami" - inspired by the Japanese word for "wolf" - represents our fierce dedication to perfection and the pack-like family atmosphere we strive to create among our team and customers.
-                    </p>
+                        Menjadi Pelopor di Kalangan dimsum daerah Purwokerto Okami Dimsum kedai dimsum yang baru berdiri pada tahun 2024, tapi sebelum itu kami aktiv menjual dimsum dengan metode "Open Pre-order" yang Dahulu kala Bernama "Ttitik Dimsum" Hingga membuka Kedai berubah Nama menjadi "Okami Dimsum" Kami menyediakan lebih dari 10 Variant dimsum yang bisa dinikmati setiap hari.                    </p>
                     <p class="text-gray-600">
-                        What began as a small 10-table establishment has now grown into one of Jakarta's most beloved dimsum destinations, serving thousands of satisfied customers weekly while maintaining the same attention to detail and quality that defined us from day one.
-                    </p>
+                        Okami Dimsum bisa disajikan dengan Sauce Chili oil dan Bangkok Khas Okami agar lebih nikmat, Dimsum disajikan daloam keadaan hangat membuat dimsum terasa harum dan kenyal.                    </p>
                 </div>
             </div>
         </div>
@@ -46,10 +43,10 @@
     <section class="py-16 bg-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-dark">Our Values</h2>
+                <h2 class="text-3xl font-bold text-dark">Nilai-Nilai Kami</h2>
                 <div class="h-1 w-16 bg-primary mx-auto mt-4 rounded-full"></div>
                 <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                    These core principles guide everything we do at Okami Dimsum, from selecting ingredients to serving our customers.
+                    Prinsip-prinsip inti ini memandu semua yang kami lakukan di Okami Dimsum, mulai dari memilih bahan hingga melayani pelanggan kami.
                 </p>
             </div>
 
@@ -60,9 +57,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Quality First</h3>
+                    <h3 class="text-xl font-bold text-dark mb-3">Kualitas Utama</h3>
                     <p class="text-gray-600">
-                        We never compromise on the quality of our ingredients. From premium flour to seasonal vegetables, we source the best ingredients to create our signature dimsum.
+                        Kami tidak pernah berkompromi pada kualitas bahan-bahan kami. Dari tepung premium hingga sayuran musiman, kami mencari bahan-bahan terbaik untuk menciptakan dimsum khas kami.
                     </p>
                 </div>
 
@@ -72,9 +69,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Tradition & Innovation</h3>
+                    <h3 class="text-xl font-bold text-dark mb-3">Tradisi & Inovasi</h3>
                     <p class="text-gray-600">
-                        We respect traditional dimsum recipes passed down through generations while embracing innovative techniques and flavor combinations.
+                        Kami menghormati resep dimsum tradisional yang diturunkan dari generasi ke generasi sambil mengadopsi teknik inovatif dan kombinasi rasa yang unik.
                     </p>
                 </div>
 
@@ -84,9 +81,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-dark mb-3">Heartfelt Service</h3>
+                    <h3 class="text-xl font-bold text-dark mb-3">Pelayanan Tulus</h3>
                     <p class="text-gray-600">
-                        We believe in treating every customer like family. Our service aims to create a memorable dining experience with attention to detail and warm hospitality.
+                        Kami percaya untuk memperlakukan setiap pelanggan seperti keluarga. Layanan kami bertujuan menciptakan pengalaman makan yang berkesan dengan perhatian terhadap detail dan keramahan yang hangat.
                     </p>
                 </div>
             </div>
@@ -97,10 +94,10 @@
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-dark">Meet Our Team</h2>
+                <h2 class="text-3xl font-bold text-dark">Kenali Tim Kami</h2>
                 <div class="h-1 w-16 bg-primary mx-auto mt-4 rounded-full"></div>
                 <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                    The passionate individuals who make Okami Dimsum special every day.
+                    Orang-orang berdedikasi yang membuat Okami Dimsum menjadi istimewa setiap hari.
                 </p>
             </div>
 
@@ -117,9 +114,9 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Lulu</h3>
-                    <p class="text-primary font-medium">Founder & Head Chef</p>
+                    <p class="text-primary font-medium">Pendiri & Kepala Chef</p>
                     <p class="mt-2 text-gray-600 text-sm">
-                        Third-generation dimsum master with over 25 years of culinary experience.
+                        Ahli dimsum generasi ketiga dengan pengalaman kuliner lebih dari 25 tahun.
                     </p>
                 </div>
 
@@ -135,9 +132,9 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Mita</h3>
-                    <p class="text-primary font-medium">Operations Manager</p>
+                    <p class="text-primary font-medium">Manajer Operasional</p>
                     <p class="mt-2 text-gray-600 text-sm">
-                        Ensures our restaurant runs smoothly and every customer leaves satisfied.
+                        Memastikan restoran kami berjalan lancar dan setiap pelanggan pulang dengan puas.
                     </p>
                 </div>
 
@@ -153,9 +150,9 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Veas</h3>
-                    <p class="text-primary font-medium">Culinary Developer</p>
+                    <p class="text-primary font-medium">Pengembang Kuliner</p>
                     <p class="mt-2 text-gray-600 text-sm">
-                        Creates new and exciting dimsum recipes that respect tradition while embracing innovation.
+                        Menciptakan resep dimsum baru dan menarik yang menghormati tradisi sambil mengadopsi inovasi.
                     </p>
                 </div>
 
@@ -171,9 +168,9 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Andriana</h3>
-                    <p class="text-primary font-medium">Customer Experience</p>
+                    <p class="text-primary font-medium">Pelayanan Pelanggan</p>
                     <p class="mt-2 text-gray-600 text-sm">
-                        Dedicated to ensuring every guest has a memorable dining experience.
+                        Berdedikasi untuk memastikan setiap tamu memiliki pengalaman bersantap yang berkesan.
                     </p>
                 </div>
             </div>
@@ -184,10 +181,10 @@
     <section class="py-16 bg-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-dark">Our Restaurant</h2>
+                <h2 class="text-3xl font-bold text-dark">Restoran Kami</h2>
                 <div class="h-1 w-16 bg-primary mx-auto mt-4 rounded-full"></div>
                 <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
-                    A warm, welcoming atmosphere designed to enhance your dimsum experience.
+                    Suasana yang hangat dan nyaman yang dirancang untuk meningkatkan pengalaman dimsum Anda.
                 </p>
             </div>
 
@@ -197,7 +194,7 @@
                         <img src="{{ asset('images/okami-1.jpg') }}" alt="Restaurant Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="font-medium text-dark">Modern Dining Area</h3>
+                        <h3 class="font-medium text-dark">Area Makan Modern</h3>
                     </div>
                 </div>
                 
@@ -206,7 +203,7 @@
                         <img src="{{ asset('images/okami-2.jpeg') }}" alt="Private Dining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="font-medium text-dark">Clean and comfortable </h3>
+                        <h3 class="font-medium text-dark">Bersih dan nyaman</h3>
                     </div>
                 </div>
                 
@@ -215,7 +212,7 @@
                         <img src="{{ asset('images/open-kitchen.jpeg') }}" alt="Open Kitchen" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <div class="p-4 bg-white">
-                        <h3 class="font-medium text-dark">Open Kitchen Concept</h3>
+                        <h3 class="font-medium text-dark">Konsep Dapur Terbuka</h3>
                     </div>
                 </div>
             </div>
@@ -225,16 +222,16 @@
     <!-- CTA -->
     <section class="bg-primary py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Experience Authentic Dimsum Today</h2>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Rasakan Dimsum Autentik Hari Ini</h2>
             <p class="text-white text-opacity-90 mb-8 max-w-3xl mx-auto">
-                Join us for a memorable dining experience or order online for pickup and delivery.
+                Bergabunglah dengan kami untuk pengalaman bersantap yang berkesan atau pesan online untuk diambil dan diantar.
             </p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="{{ route('menu') }}" class="px-6 py-3 bg-white text-primary hover:bg-accent hover:text-dark font-medium rounded-lg transition-colors duration-300 shadow-md">
-                    View Our Menu
+                    Lihat Menu Kami
                 </a>
                 <a href="{{ route('contact') }}" class="px-6 py-3 border border-white text-white hover:bg-white hover:text-primary font-medium rounded-lg transition-colors duration-300">
-                    Contact Us
+                    Hubungi Kami
                 </a>
             </div>
         </div>
