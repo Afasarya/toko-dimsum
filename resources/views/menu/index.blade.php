@@ -7,17 +7,17 @@
     <div class="relative bg-cover bg-center h-64 md:h-80" style="background-image: url('{{ asset('images/bannerhd.jpg') }}')">
         <div class="absolute inset-0 bg-dark bg-opacity-60"></div>
         <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-            <h1 class="text-4xl font-bold text-white mb-2">Our Menu</h1>
-            <p class="text-lg text-light">Authentic dimsum handcrafted with premium ingredients</p>
+            <h1 class="text-4xl font-bold text-white mb-2">Menu Kami</h1>
+            <p class="text-lg text-light">Dimsum autentik buatan tangan dengan bahan premium</p>
             <div class="mt-6 flex flex-wrap gap-4">
                 <a href="#steamed" class="inline-flex items-center px-4 py-2 bg-primary hover:bg-secondary text-white rounded-full transition-colors duration-300 text-sm">
-                    Steamed Dimsum
+                    Dimsum Kukus
                 </a>
                 <a href="#fried" class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full transition-colors duration-300 text-sm">
-                    Fried Dimsum
+                    Dimsum Goreng
                 </a>
                 <a href="#specials" class="inline-flex items-center px-4 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-full transition-colors duration-300 text-sm">
-                    Chef's Specials
+                    Menu Spesial Chef
                 </a>
             </div>
         </div>
@@ -29,14 +29,14 @@
                 <!-- Sidebar Filters -->
                 <div class="w-full md:w-64 flex-shrink-0 mb-8 md:mb-0 md:mr-8">
                     <div class="bg-white rounded-xl shadow-soft p-6 sticky top-24">
-                        <h3 class="font-medium text-lg text-dark mb-4">Categories</h3>
+                        <h3 class="font-medium text-lg text-dark mb-4">Kategori</h3>
                         <div class="space-y-2">
                             <div class="flex items-center">
                                 <input id="all-categories" name="category" type="radio" value="" 
                                     {{ !request('category') ? 'checked' : '' }}
                                     class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
                                 <label for="all-categories" class="ml-3 block text-sm font-medium text-dark">
-                                    All Categories
+                                    Semua Kategori
                                 </label>
                             </div>
 
@@ -53,14 +53,14 @@
                         </div>
 
                         <div class="border-t border-gray-200 pt-4 mt-6">
-                            <h3 class="font-medium text-lg text-dark mb-4">Price Range</h3>
+                            <h3 class="font-medium text-lg text-dark mb-4">Rentang Harga</h3>
                             <div class="space-y-2">
                                 <div class="flex items-center">
                                     <input id="price-all" name="price" type="radio" value="" 
                                         {{ !request('price_range') ? 'checked' : '' }}
                                         class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
                                     <label for="price-all" class="ml-3 block text-sm font-medium text-dark">
-                                        All Prices
+                                        Semua Harga
                                     </label>
                                 </div>
                                 <div class="flex items-center">
@@ -68,7 +68,7 @@
                                         {{ request('price_range') == '0-25000' ? 'checked' : '' }}
                                         class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
                                     <label for="price-1" class="ml-3 block text-sm font-medium text-dark">
-                                        Below Rp 25.000
+                                        Di bawah Rp 25.000
                                     </label>
                                 </div>
                                 <div class="flex items-center">
@@ -92,7 +92,7 @@
                                         {{ request('price_range') == '100000-0' ? 'checked' : '' }}
                                         class="focus:ring-primary h-4 w-4 text-primary border-gray-300">
                                     <label for="price-4" class="ml-3 block text-sm font-medium text-dark">
-                                        Above Rp 100.000
+                                        Di atas Rp 100.000
                                     </label>
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
 
                         <div class="mt-6">
                             <button type="button" id="filterButton" class="w-full bg-primary text-white py-3 px-4 rounded-lg hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300 font-medium shadow-md">
-                                Apply Filters
+                                Terapkan Filter
                             </button>
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                                 <div class="relative rounded-lg shadow-sm">
                                     <input type="text" name="search" id="searchInput" value="{{ request('search') }}"
                                         class="focus:ring-primary focus:border-primary block w-full rounded-lg border-gray-300 pl-4 pr-10 py-2" 
-                                        placeholder="Search menu items...">
+                                        placeholder="Cari menu...">
                                     <button type="button" id="searchButton" class="absolute inset-y-0 right-0 pr-3 flex items-center">
                                         <svg class="h-5 w-5 text-gray-400 hover:text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -127,13 +127,13 @@
 
                             <!-- Sort Options -->
                             <div class="flex items-center">
-                                <span class="text-gray-600 mr-2 whitespace-nowrap">Sort by:</span>
+                                <span class="text-gray-600 mr-2 whitespace-nowrap">Urut berdasarkan:</span>
                                 <select id="sortProducts" class="rounded-lg border-gray-300 focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50 text-sm">
-                                    <option value="name_asc" {{ request('sort') == 'name_asc' ? 'selected' : '' }}>Name (A-Z)</option>
-                                    <option value="name_desc" {{ request('sort') == 'name_desc' ? 'selected' : '' }}>Name (Z-A)</option>
-                                    <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>Price (Low to High)</option>
-                                    <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>Price (High to Low)</option>
-                                    <option value="newest" {{ request('sort') == 'newest' || !request('sort') ? 'selected' : '' }}>Newest</option>
+                                    <option value="name_asc" {{ request('sort') == 'name_asc' ? 'selected' : '' }}>Nama (A-Z)</option>
+                                    <option value="name_desc" {{ request('sort') == 'name_desc' ? 'selected' : '' }}>Nama (Z-A)</option>
+                                    <option value="price_asc" {{ request('sort') == 'price_asc' ? 'selected' : '' }}>Harga (Rendah ke Tinggi)</option>
+                                    <option value="price_desc" {{ request('sort') == 'price_desc' ? 'selected' : '' }}>Harga (Tinggi ke Rendah)</option>
+                                    <option value="newest" {{ request('sort') == 'newest' || !request('sort') ? 'selected' : '' }}>Terbaru</option>
                                 </select>
                             </div>
                         </div>
@@ -144,13 +144,13 @@
                             <svg class="mx-auto h-12 w-12 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <h3 class="mt-4 text-lg font-medium text-dark">No menu items found</h3>
+                            <h3 class="mt-4 text-lg font-medium text-dark">Menu tidak ditemukan</h3>
                             <p class="mt-2 text-gray-500">
-                                Try adjusting your search or filter criteria.
+                                Coba sesuaikan pencarian atau kriteria filter Anda.
                             </p>
                             <div class="mt-6">
                                 <a href="{{ route('menu') }}" class="inline-flex items-center px-5 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors duration-300">
-                                    Reset Filters
+                                    Reset Filter
                                 </a>
                             </div>
                         </div>
@@ -165,7 +165,7 @@
                                         @if($product->is_featured)
                                         <div class="absolute top-3 left-3">
                                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary text-white">
-                                                Featured
+                                                Unggulan
                                             </span>
                                         </div>
                                         @endif
@@ -188,7 +188,7 @@
                                         @endif
                                         <div class="mt-4 flex items-center justify-between">
                                             <a href="{{ route('menu.show', $product->slug) }}" class="text-sm text-primary hover:text-secondary font-medium flex items-center">
-                                                View Details
+                                                Lihat Detail
                                                 <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
                                                 </svg>

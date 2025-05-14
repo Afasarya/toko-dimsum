@@ -31,7 +31,7 @@
                                 @endif
                             @endfor
                         </div>
-                        <span class="text-sm text-gray-500 ml-2">({{ $product->reviews_count ?? 0 }} reviews)</span>
+                        <span class="text-sm text-gray-500 ml-2">({{ $product->reviews_count ?? 0 }} ulasan)</span>
                     </div>
                 </div>
 
@@ -39,7 +39,7 @@
                 <p class="text-2xl text-primary font-semibold mb-4">Rp {{ number_format($product->price, 0, ',', '.') }}</p>
                 
                 <div class="mb-6">
-                    <h2 class="text-lg font-semibold text-gray-900 mb-2">Description</h2>
+                    <h2 class="text-lg font-semibold text-gray-900 mb-2">Deskripsi</h2>
                     <div class="text-gray-600 space-y-3">
                         {{ $product->description }}
                     </div>
@@ -47,7 +47,7 @@
                 
                 @if($product->ingredients)
                 <div class="mb-6">
-                    <h2 class="text-lg font-semibold text-gray-900 mb-2">Ingredients</h2>
+                    <h2 class="text-lg font-semibold text-gray-900 mb-2">Bahan-bahan</h2>
                     <div class="text-gray-600">
                         {{ $product->ingredients }}
                     </div>
@@ -57,7 +57,7 @@
                 <form action="{{ route('cart.add', $product->id) }}" method="POST">
                     @csrf
                     <div class="mb-6">
-                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Quantity</h2>
+                        <h2 class="text-lg font-semibold text-gray-900 mb-2">Jumlah</h2>
                         <div class="flex items-center">
                             <button type="button" id="decrementQuantity" class="text-gray-500 focus:outline-none focus:text-gray-600 p-2 border border-gray-300 rounded-l-md">
                                 <svg class="h-4 w-4" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M20 12H4"></path></svg>
@@ -74,10 +74,10 @@
                             <svg class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                             </svg>
-                            Add to Cart
+                            Tambahkan ke Keranjang
                         </button>
                         <button type="submit" formaction="{{ route('checkout.direct', $product->id) }}" class="w-full sm:w-1/2 bg-secondary text-white py-3 px-4 rounded-md hover:bg-accent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
-                            Buy Now
+                            Beli Sekarang
                         </button>
                     </div>
                 </form>
@@ -88,13 +88,13 @@
                             <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            <span>Ready in 30 mins</span>
+                            <span>Siap dalam 30 menit</span>
                         </div>
                         <div class="flex items-center text-gray-600">
                             <svg class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
                             </svg>
-                            <span>Free delivery</span>
+                            <span>Pengiriman gratis</span>
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
         <!-- Related Products -->
         @if($relatedProducts && $relatedProducts->count() > 0)
         <div class="mt-16">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">You may also like</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Mungkin Anda juga suka</h2>
             <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach($relatedProducts as $related)
                     <div class="bg-white rounded-lg shadow-md overflow-hidden transition transform hover:scale-105 hover:shadow-lg">
@@ -140,7 +140,7 @@
         
         <!-- Customer Reviews -->
         <div class="mt-16 border-t border-gray-200 pt-8">
-            <h2 class="text-2xl font-bold text-gray-900">Customer Reviews</h2>
+            <h2 class="text-2xl font-bold text-gray-900">Ulasan Pelanggan</h2>
             
             @if($product->reviews && $product->reviews->count() > 0)
                 <div class="mt-8 space-y-6">
@@ -149,11 +149,11 @@
                         <div class="flex items-center mb-4">
                             <div class="mr-4">
                                 <div class="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-semibold">
-                                    {{ substr($review->user->name ?? 'Anonymous', 0, 1) }}
+                                    {{ substr($review->user->name ?? 'Anonim', 0, 1) }}
                                 </div>
                             </div>
                             <div>
-                                <h4 class="text-lg font-medium text-gray-900">{{ $review->user->name ?? 'Anonymous' }}</h4>
+                                <h4 class="text-lg font-medium text-gray-900">{{ $review->user->name ?? 'Anonim' }}</h4>
                                 <div class="flex items-center mt-1">
                                     <div class="flex text-yellow-400">
                                         @for ($i = 1; $i <= 5; $i++)
@@ -180,17 +180,17 @@
                 </div>
             @else
                 <div class="mt-6 bg-gray-50 p-6 rounded-lg text-center">
-                    <p class="text-gray-600">No reviews yet. Be the first to review this product!</p>
+                    <p class="text-gray-600">Belum ada ulasan. Jadilah yang pertama mengulas produk ini!</p>
                 </div>
             @endif
             
             @auth
                 <div class="mt-8">
-                    <h3 class="text-lg font-medium text-gray-900">Leave a review</h3>
+                    <h3 class="text-lg font-medium text-gray-900">Berikan ulasan</h3>
                     <form action="{{ route('reviews.store', $product->id) }}" method="POST" class="mt-4">
                         @csrf
                         <div class="mb-4">
-                            <label for="rating" class="block text-sm font-medium text-gray-700 mb-1">Rating</label>
+                            <label for="rating" class="block text-sm font-medium text-gray-700 mb-1">Penilaian</label>
                             <div class="flex items-center">
                                 @for ($i = 1; $i <= 5; $i++)
                                     <button type="button" data-rating="{{ $i }}" class="rating-star p-1 text-gray-300 focus:outline-none">
@@ -201,19 +201,19 @@
                             </div>
                         </div>
                         <div class="mb-4">
-                            <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Comment</label>
+                            <label for="comment" class="block text-sm font-medium text-gray-700 mb-1">Komentar</label>
                             <textarea id="comment" name="comment" rows="4" class="shadow-sm focus:ring-primary focus:border-primary block w-full sm:text-sm border-gray-300 rounded-md" required></textarea>
                         </div>
                         <div class="flex justify-end">
                             <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                                Submit Review
+                                Kirim Ulasan
                             </button>
                         </div>
                     </form>
                 </div>
             @else
                 <div class="mt-8 bg-gray-50 p-6 rounded-lg text-center">
-                    <p class="text-gray-600">Please <a href="{{ route('login') }}" class="text-primary hover:text-secondary">log in</a> to leave a review.</p>
+                    <p class="text-gray-600">Silakan <a href="{{ route('login') }}" class="text-primary hover:text-secondary">masuk</a> untuk memberikan ulasan.</p>
                 </div>
             @endauth
         </div>
