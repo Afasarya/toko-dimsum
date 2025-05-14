@@ -101,7 +101,7 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                 <div class="text-center">
                     <div class="relative mb-4 inline-block">
                         <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
@@ -114,10 +114,7 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Lulu</h3>
-                    <p class="text-primary font-medium">Pendiri & Kepala Chef</p>
-                    <p class="mt-2 text-gray-600 text-sm">
-                        Ahli dimsum generasi ketiga dengan pengalaman kuliner lebih dari 25 tahun.
-                    </p>
+                    <p class="text-primary font-medium">Back End</p>
                 </div>
 
                 <div class="text-center">
@@ -132,10 +129,8 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Mita</h3>
-                    <p class="text-primary font-medium">Manajer Operasional</p>
-                    <p class="mt-2 text-gray-600 text-sm">
-                        Memastikan restoran kami berjalan lancar dan setiap pelanggan pulang dengan puas.
-                    </p>
+                    <p class="text-primary font-medium">Front End</p>
+
                 </div>
 
                 <div class="text-center">
@@ -150,28 +145,7 @@
                         </div>
                     </div>
                     <h3 class="text-xl font-bold text-dark">Veas</h3>
-                    <p class="text-primary font-medium">Pengembang Kuliner</p>
-                    <p class="mt-2 text-gray-600 text-sm">
-                        Menciptakan resep dimsum baru dan menarik yang menghormati tradisi sambil mengadopsi inovasi.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="relative mb-4 inline-block">
-                        <div class="h-48 w-48 rounded-full overflow-hidden border-4 border-accent mx-auto">
-                            <img src="{{ asset('images/testimonial-1.png') }}" alt="Ahmad Fauzi" class="h-full w-full object-cover">
-                        </div>
-                        <div class="absolute bottom-0 right-4 h-12 w-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                        </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-dark">Andriana</h3>
-                    <p class="text-primary font-medium">Pelayanan Pelanggan</p>
-                    <p class="mt-2 text-gray-600 text-sm">
-                        Berdedikasi untuk memastikan setiap tamu memiliki pengalaman bersantap yang berkesan.
-                    </p>
+                    <p class="text-primary font-medium">Hustler</p>
                 </div>
             </div>
         </div>
